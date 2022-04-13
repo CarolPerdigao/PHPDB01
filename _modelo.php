@@ -1,7 +1,13 @@
 <?php
 
+// Configuração da página
+require($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
+
+// Título da página
+$title = 'Quem tem fome tem pressa.';
+
 // Inclui o cabeçalho da página 
-require('_header.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/_header.php');
 
 ?>
 
@@ -27,4 +33,4 @@ require('_header.php');
 
 <?php
 
-require('_footer.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/_footer.php');
