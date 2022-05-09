@@ -113,6 +113,12 @@ SQL;
         // Feedback
         $feedback = true;
 
+    // Se ocorreram erros...
+    else :
+
+        // Formada mensagem de erro.
+        $error = '<h3>Oooops!</h3><p>Ocorreram erros que impedem seu cadastro:</p><ul>' . $error . '</ul>';
+
     endif;
 
 // Obtendo os dados do banco e preenchendo o formulário.
@@ -180,8 +186,19 @@ require($_SERVER['DOCUMENT_ROOT'] . '/_header.php');
             <h3>Oba!</h3>
             <p>Seu cadastro foi atualizado com sucesso!</p>
             <hr class="divider">
-            <p class="text-center"><a href="/"><i class="fa-solid fa-house fa-fw"></i> Página inicial</a></p>
+            <div class="user-links">
 
+                <a href="/user/profile/">
+                    <i class="fa-solid fa-address-card fa-fw"></i>
+                    Ver Perfil
+                </a>
+
+                <a href="/">
+                    <i class="fa-solid fa-house fa-fw"></i>
+                    Página inicial
+                </a>
+
+            </div>
         </div>
 
         <script>
